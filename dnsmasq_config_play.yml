@@ -1,0 +1,8 @@
+---
+  - name: dnsmasq config
+    gather_facts: false
+    hosts: tstub
+    become: yes
+    become_method: sudo
+    roles:
+      - dnsmasq

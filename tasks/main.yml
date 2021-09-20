@@ -1,0 +1,12 @@
+---
+  - name: config dnsmasq
+    copy:
+      src: dnsmasq.conf #files/dnsmasq.conf
+      dest: /etc/dnsmasq.conf
+      force: yes
+      backup: yes
+  - name: restart demon
+    systemd:
+       name: dnsmasq
+       state: restarted
+# tasks file for dnsmasq
